@@ -1,6 +1,9 @@
+/* Import font from googleapis */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=Space+Mono&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+
+/* set the root by define the font name */
 :root{
     --space-mono-font: 'Space Mono', monospace;
     --border-dark-subtle: #373838; 
@@ -17,7 +20,7 @@ body *{
     font-family: var(--font-tillana);
 }
 /**
-Page Design
+Styling page 
 */
 body,
 html{
@@ -48,7 +51,7 @@ padding-bottom: 2em;
 }
 
 
-/* Top Navigation Custom Design */
+/* CSS styling for topNavBar */
 #topNavigation{
     background-color: #67778b;
     z-index: 1023;
@@ -256,16 +259,19 @@ body, html {
     width: 40%;
   }
 
-  /* media query */
+  /* media query for screen between 300px - 768px */
   @media only screen and (min-width: 300px) and (max-width: 768px) {
-    .source {
-        font-size: 8pt;
-    }
+    /* set width for image in carousel and about-me */
     img {
         width: 300px;
     }
     .me-img {
         width: 200px !important;
+    }
+      
+     /* change the font size */
+    .source {
+        font-size: 8pt;
     }
     h1 {
         font-size: 18pt;
@@ -283,23 +289,28 @@ body, html {
         font-size: 9pt;
     }
 
+    /* reduce div size content to fit the mobile size */
     div#testimonies {
         position: relative;
         width: 250px;
         margin: auto;
     }
 
+    /* reduce font size */
     #testimonies .testimony-msg {
         font-family: var(--font-tillana);
         font-weight: 600;
         font-size: 11pt;
         text-align: center;
     }
+      
+    /* change the size of button left and right in testimonies */
     #testimonies .testimony-item-prev .testimony-item-prev-btn, #testimonies .testimony-item-next .testimony-item-next-btn {
         width: 15px;
         height: 15px;
     }
 
+    /* change the size of quote */
     #testimonies .testimony-quote .material-symbols-outlined {
         font-size: 1.5rem;
         color: #c7c7c7;
